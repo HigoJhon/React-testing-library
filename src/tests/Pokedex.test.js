@@ -58,30 +58,8 @@ test('Teste se é mostrado apenas um Pokémon por vez;', () => {
   expect(newPokemon).toBeInTheDocument();
 });
 test('Teste se a Pokédex tem os botões de filtro', () => {
-  // const { container } =
   renderWithRouter(<App />);
-  // console.log(container);
-  // const filterAll = screen.getByRole('button', { name: /all/i });
-  // const filterEle = screen.getByRole('button', { name: /electric/i });
-  // const filterFir = screen.getByRole('button', { name: /fire/i });
-  // const filterBug = screen.getByRole('button', { name: /bug/i });
-  // const filterPoi = screen.getByRole('button', { name: /poison/i });
-  // const filterPsy = screen.getByRole('button', { name: /psychic/i });
-  // const filterNor = screen.getByRole('button', { name: /normal/i });
-  // const filterDra = screen.getByRole('button', { name: /dragon/i });
 
-  // const isTrue = filterAll && filterEle && filterFir
-  // && filterBug && filterPoi && filterPsy && filterNor && filterDra;
-
-  // expect(isTrue).toBeInTheDocument();
-
-  // userEvent.click(filterNor);
-
-  // const snorlax = screen.getByText(/snorlax/i);
-
-  // expect(snorlax).toBeInTheDocument();
-  // const buttons = screen.getAllByRole('button');
-  // expect(buttons).toHaveClass('pokemon-type-button');
   const checkBtn = screen.queryAllByTestId('pokemon-type-button');
   console.log(checkBtn);
   expect(checkBtn[0]).toBeInTheDocument();
