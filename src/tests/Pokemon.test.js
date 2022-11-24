@@ -82,7 +82,6 @@ test('Teste se existe um ícone de estrela nos Pokémon favoritados', () => {
 
   const clickFav = screen.getByText(/pokémon favoritado\?/i);
   expect(clickFav).toBeInTheDocument();
-
   userEvent.click(clickFav);
 
   const fav = screen.getByRole('img', { name: /pikachu is marked as favorite/i });
